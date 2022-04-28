@@ -2,10 +2,11 @@
   <div class="principal">
     <h1>Bin<span class="num2">2</span>Dec Converter</h1>
     <p class="paragraph">Convert Binary to Decimal or Decimal to Binary</p>
+    <p v-if="decimal" class="label">From Decimal to Binary</p>
+    <p v-else class="label">From Binary to Decimal</p>
     <div class="divSeparator">
       <div>
-        <label v-if="decimal" class="label">From Decimal to Binary</label>
-        <label v-else class="label">From Binary to Decimal</label>
+        
         <input
           class="inputs"
           type="number"
@@ -13,13 +14,13 @@
           placeholder="Type the value"
         />
       </div>
-      <div>
+      <div class="btn-con">
         <button @click="fazConversao" className="button">Convert</button>
         <button @click="inverteOperacao" className="button">Reverter</button>
       </div>
 
       <div class="res">
-        <p>{{ valor_res }}</p>
+        <p class="result">{{ valor_res }}</p>
       </div>
     </div>
   </div>
@@ -73,24 +74,24 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 30px;
+  padding: 0;
   text-align: left;
 }
 .inputs {
   display: flex;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 18px;
+  padding: 15px;
   border-radius: 15px;
   border: none;
-  width: 300px;
+  width: 22em;
 }
 ::-webkit-input-placeholder {
   color: #060808;
   font-size: 12px;
 }
 .principal {
-  padding: 15px;
+  padding: 8px;
   border: none;
   width: 25%;
   height: 450px;
@@ -102,19 +103,18 @@ p {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 .label {
-  padding-top: 7px;
-  text-align: left;
-  font-size: 18px;
+  padding-top: 1px;
+  text-align: center;
+  font-size: 1.5em;
   color: #418d83;
   font-family: "Plus Jakarta Sans", sans-serif;
-  margin-bottom: 2em;
 }
 .label:after {
   padding-right: 5px;
 }
 .button {
   border: none;
-  padding: 15px;
+  padding: 20px;
   cursor: pointer;
   background: #418d83;
   color: #fff;
@@ -122,6 +122,8 @@ p {
   margin-top: 10px;
   transition: linear 0.5s;
   font-size: 15px;
+  width: 8em;
+  font-size: 1em;
 }
 .button:hover {
   background: #2eccb7;
@@ -132,5 +134,12 @@ p {
 .paragraph {
   color: #8a8a8a;
   font-size: 12px;
+}
+.btn-con{
+  display: flex;
+  gap: 2em;
+}
+.result{
+  font-size: 2em;
 }
 </style>
