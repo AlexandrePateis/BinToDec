@@ -11,12 +11,12 @@
           class="inputs"
           type="number"
           v-model="valor"
-          placeholder="Type the value"
+          placeholder="Type the value..."
         />
       </div>
       <div class="btn-con">
         <button @click="fazConversao" className="button">Convert</button>
-        <button @click="inverteOperacao" className="button">Reverter</button>
+        <button @click="inverteOperacao" className="button">Revert</button>
       </div>
 
       <div class="res">
@@ -64,9 +64,14 @@ export default {
 </script>
 
 <style scoped>
+*{
+  @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+  font-family: 'Acme', sans-serif;
+}
 h1,
 p {
   text-align: center;
+  font-family: 'Acme', sans-serif;
 }
 .divSeparator {
   display: flex;
@@ -83,7 +88,7 @@ p {
   box-sizing: border-box;
   padding: 15px;
   border-radius: 15px;
-  border: none;
+  border: solid 1px black;
   width: 22em;
 }
 ::-webkit-input-placeholder {
@@ -96,18 +101,18 @@ p {
   width: 25%;
   height: 450px;
   margin: 0 auto;
-  background: #f2f2f2;
+  background: #ffffff;
   border-radius: 15px;
   -webkit-box-shadow: 1px 4px 23px 3px rgba(0, 0, 0, 0.52);
   box-shadow: 1px 4px 23px 3px rgba(0, 0, 0, 0.52);
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: 'Acme', sans-serif;
 }
 .label {
   padding-top: 1px;
   text-align: center;
   font-size: 1.5em;
-  color: #418d83;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #000000;
+  font-family: 'Acme', sans-serif;
 }
 .label:after {
   padding-right: 5px;
@@ -116,7 +121,7 @@ p {
   border: none;
   padding: 20px;
   cursor: pointer;
-  background: #418d83;
+  background: #111;
   color: #fff;
   border-radius: 25px;
   margin-top: 10px;
@@ -126,13 +131,13 @@ p {
   font-size: 1em;
 }
 .button:hover {
-  background: #2eccb7;
+  background: #222;
 }
 .num2 {
-  color: #418d83;
+  color: #000000;
 }
 .paragraph {
-  color: #8a8a8a;
+  color: #000000;
   font-size: 12px;
 }
 .btn-con{
