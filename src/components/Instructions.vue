@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="main">
         <p class="paragrafo-principal">Instructions for use</p>
             <ol>
                 <li>When starting, the program will always default to decimal to binary.</li>
@@ -20,6 +20,9 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
     font-family: 'Acme', sans-serif;
+}
+.main{
+    width: 33%;
 }
 .paragrafo-principal{
     text-align: center;

@@ -15,16 +15,17 @@ export default {
 
 <style scoped>
 p{
-    width: 100%;
+    width: 85%;
     display: inlin-block;
     color: white;
     @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
     font-family: 'Acme', sans-serif;
     line-height: 1.5em;
+    text-align: justify;
 }
 .paragrafo{
-    
-    width: 30%;
+
+    width: 33%;
 }
 .title{
     font-size: 2em;
